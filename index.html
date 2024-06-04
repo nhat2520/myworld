@@ -1,1 +1,54 @@
-<h1> chổi <h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('earth/galaxy.png');
+            background-size: cover;
+        }
+        .select {
+            margin-top: 10px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #myImage {
+            height: 200px;
+            border-radius: 12px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var sel = document.getElementById('sel')
+            sel.addEventListener("change",() => {
+                var selectedValue = document.getElementById("sel").value;
+                document.getElementById("myImage").src = selectedValue;
+            })
+        }
+        
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Thế giới của tui</h1>
+        <img id="myImage" src="earth/240.png" alt="">
+        <div class="select">
+            <select name="select" id="sel">
+                <option value="earth/240.png">240p</option>
+                <option value="earth/480.png">480p</option>
+                <option value="earth/720.png">720p</option>
+                <option value="earth/1080.png">1080p</option>
+                <option value="earth/cinanh.jpg">2160p</option>
+            </select>
+        </div>
+    </div>
+
+
+</body>
+</html>
